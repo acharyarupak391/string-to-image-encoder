@@ -17,9 +17,10 @@ If we have a text file with content:
 Hello I am just a string! Nothing fancy!!!
 ```
 
-This will be encoded as image as such:
+This will be encoded into image as such:
 ![img.png](assets/img.png)
-_since the text content is very less, the resulting image size will be very very small(8 * 2 in this case)_
+
+_since the text content is very less, the resulting image size is **very very** small(8 * 2 in this case)_
 
 **_You can also see the `sample.txt` & its encoded file `sample.png` in the directory_**
 
