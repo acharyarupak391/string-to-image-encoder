@@ -1,22 +1,9 @@
-import cv2
-import sys
 import os
+from args import get_image_contents
 
-args = sys.argv
-
-def arg_error():
-    print("Please provide a valid image path to decode")
-    sys.exit(0)
-
-file_name = ''
-if(len(args) > 1):
-    file_name = args[1]
-    try:
-        img = cv2.imread(file_name)
-    except:
-        arg_error()
-else:
-    arg_error()
+contents = get_image_contents(msg="Please provide a valid image path to decode")
+img = contents['img']
+file_name = contents['file_name']
 
 # img = np.array(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
 decoded_string = ''.join([chr(val) for val in img.flatten()]).rstrip()
@@ -27,4 +14,4 @@ decoded_file_name = "decoded-{file}.txt".format(file=os.path.splitext(file_name)
 with open(decoded_file_name, 'w') as f:
     f.write(decoded_string)
 
-print("Your file is decoded: {path}".format(path=decoded_file_name))
+print("The decoded file is saved as: {path}".format(path=decoded_file_name))
