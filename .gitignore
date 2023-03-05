@@ -1,0 +1,6 @@
+*.png
+*.txt
+!requirements.txt
+!sample.txt
+!sample.png
+.idea/*
