@@ -1,6 +1,6 @@
 *.png
 *.txt
 !requirements.txt
-!sample.txt
-!sample.png
+!sample.*
+!assets/*
 .idea/*
